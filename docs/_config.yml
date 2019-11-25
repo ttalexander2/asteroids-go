@@ -1,4 +1,4 @@
-site.title: "CSC732 Final Project"
+title: "CSC732 Final Project"
 highlighter: rouge
 markdown: kramdown
 kramdown:
