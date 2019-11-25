@@ -77,7 +77,7 @@ In terms of repetition, loops can be used in a similar fashion to C. Unlike C, t
 
 {% highlight Golang %}
 for i:=0; i<5; i++ {
-  ...
+  Do stuff...
 }
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ However unlike C, Go does not feature a while loop. Instead, the for keyword is 
 
 {% highlight Golang %}
 for (i < 5){
-  ...
+  Do stuff...
 }
 {% endhighlight %}
 
@@ -104,13 +104,11 @@ This allows the programmer to access both the index `i` and the element `s` in t
 Unlike C, do-while loops are not features of Go. An infinite loop and a conditional break statement would need to be used to replicate the do-while behavior:
 
 {% highlight Golang %}
-i := 0
 for{
-  ...
-  if(i<5){
+  Do stuff...
+  if(condition){
     break
   }
-  i++
 }
 {% endhighlight %}
 Go also features goto and labels, however their use is discouraged.
