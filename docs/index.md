@@ -143,12 +143,12 @@ The syntax choice I’d like to see changed is the variable declarations since t
 ## Works Cited
 Citations:
 
-(https://golang.org/doc/effective_go.html)
-(https://www.golang-book.com/books/intro/5)
-(https://blog.golang.org/gos-declaration-syntax)
-(https://golang.org/doc/)
-(https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65)
-(http://golangtutorials.blogspot.com/2011/06/goroutines.html)
-(https://stackimpact.com/docs/go-performance-tuning/)
-(https://www.golang-book.com/books/intro/10)
-(https://www.golang-book.com/books/intro/9)
+[](https://golang.org/doc/effective_go.html)
+[](https://www.golang-book.com/books/intro/5)
+[](https://blog.golang.org/gos-declaration-syntax)
+[](https://golang.org/doc/)
+[](https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65)
+[](http://golangtutorials.blogspot.com/2011/06/goroutines.html)
+[](https://stackimpact.com/docs/go-performance-tuning/)
+[](https://www.golang-book.com/books/intro/10)
+[](https://www.golang-book.com/books/intro/9)
