@@ -1,4 +1,5 @@
 # Go (aka Golang)
+Cameron Larson & Thomas Alexander
 ![](https://lh6.googleusercontent.com/jZkASu5zptzg0vuciQzNFuliEeIQwTLrnGX3qW6p08pNbERWZnIBvNB6gX0hPO28o2H31AQILr1lufBQ2ww_2a4u9DxMfxmIsc9G9uPYmYmjaHMtPvS4ryXvK3uZEBkLpY6eXjcl)
 ## History and Current Status
 Development on Go began in 2007 at Google. It was publically announced in 2009 and version 1.0 was released in 2012. The primary drive behind creating Go was to provide a language with which high performance code (in terms of runtime, code creation, and code maintenance efficiency) that could easily be written for multiprocessor, networked machines running large code bases while addressing many criticisms of currently popular object oriented languages.
