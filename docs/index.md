@@ -52,11 +52,11 @@ Control of conditionals are indicated with `if`,  `else if`, and `else`. They ca
 
 {% highlight Golang %}
 if x == 0 {
-  fmt.Printf("%d\n", x)
+  //Do something
 } else if x == 1 {
-  fmd.Printf("%d\n", x}
+  //Do something else
 else {
-  fmd.Printf("%d\n\n", x)
+  //Do a different thing
 }
 {% endhighlight %}
 
@@ -77,7 +77,7 @@ In terms of repetition, loops can be used in a similar fashion to C. Unlike C, t
 
 {% highlight Golang %}
 for i:=0; i<5; i++ {
-  Do stuff...
+  //Do stuff...
 }
 {% endhighlight %}
 
@@ -85,7 +85,7 @@ However unlike C, Go does not feature a while loop. Instead, the for keyword is 
 
 {% highlight Golang %}
 for (i < 5){
-  Do stuff...
+  //Do stuff...
 }
 {% endhighlight %}
 
@@ -105,13 +105,13 @@ Unlike C, do-while loops are not features of Go. An infinite loop and a conditio
 
 {% highlight Golang %}
 for{
-  Do stuff...
+ // Do stuff...
   if(condition){
     break
   }
 }
 {% endhighlight %}
-Go also features goto and labels, however their use is discouraged.
+Go also features `goto` and labels, however their use is discouraged.
 
 ## Semantics
 
