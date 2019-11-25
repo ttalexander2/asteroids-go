@@ -49,7 +49,7 @@ Go is a strongly typed language where type declarations are required. New types 
 The control structures of Go are syntactically very similar to C or Java. 
 #### Conditionals
 Control of conditionals are indicated with `if`,  `else if`, and `else`. They can be used like so:
-```Go
+{% highlight Go %}
 if x == 0 {
   fmt.Printf("%d\n", x)
 } else if x == 1 {
@@ -57,11 +57,10 @@ if x == 0 {
 else {
   fmd.Printf("%d\n\n", x)
 }
-```
+{% endhighlight %}
 #### Switch
 Additionally, Go also features `switch` control statements. A `switch` is used with multiple `case`s and a `default`. Unlike C, a break is not required at the end of each case.
 {% highlight Go %}
-```
 switch x {
   case 0: fmt.Printf("%d\n", x)
   case 1: fmt.Printf("%d\n", x)
@@ -69,7 +68,6 @@ switch x {
   case 3: fmt.Printf("%d\n", x)
   default:  fmt.Printf("%d\n", x)
 }
-```
 {% endhighlight %}
 In terms of repetition, loops can be used in a similar fashion to C. Unlike C, the for loop is used for all repetition. The for loop can be used in the 3-component fashion: for i:=0; i<5; i++ However unlike C, Go does not feature a while loop. Instead, the for keyword is used with a boolean condition to achieve the same functionality: for (i < 5). Additionally, the for keyword can be used with no arguments to create an infinite loop. Like C, the continue statement can be used to immediately being the next iteration of the loop, and the break statement can be used to immediately exit the loop. In order to iterate over elements in data structures like arrays or maps, a for-each range loop can be used:
 
