@@ -10,7 +10,7 @@ The current version of Go is 1.13, which was released in September 2019. Current
 Go is a multi-paradigm language. It is both imperative and object oriented. Go satisfies the characteristics of an object-oriented language in a unique way that attempts to solve many criticisms made of more traditional object-oriented languages.
 ### Imperative:
 
-Go has branching and repeating logic as well as statements so it is an imperative language.
+Go has branching and repeating logic as well as statements so it is an imperative language. Statements are executed in a procedural fashion, and uses variables to abstract data. Go has the ability to function in a sequential, “one instruction at a time” manner. However, through parallel processing, Go also has the ability this “Von Neumann bottleneck.”
 
 ### Object Oriented:
 
@@ -132,7 +132,7 @@ Go is statically scoped. There is automated garbage collection. Storage is stack
 Go is a language designed to be efficient. First off, Go is compiled language. Unlike languages such as Java, which is first compiled into byte-code and then read on a VM, Go is compiled directly from source code to a binary executable. This allows for quick and direct translation, and fast build speeds. In terms of execution, Go is quite efficient. Go was written to make concurrency simple for the programmer. Unlike programming languages that were originally developed to be single threaded, Go was developed from the ground up to take advantage of multi-core processors. Instead of using threads, Go has what it calls `goroutines`, as described [above](#semantics). This allows for a very efficient use of multi-core processing power, resulting in fast concurrent execution. Furthermore, Go features clean, easy to use syntax. This makes it very easy for a programmer to translate ideas into efficient code. Because of this clean and neat syntax, Go programs are very easy to maintain. Due to its simplistic approach to OOP, code is cleaner, allowing for easier maintenance—especially with larger applications.
 
 #### Regularity:
-One feature of Go that demonstrates regularity is the repetition control structure. Unlike C, instead of for, while, and do-while loops, Go is uniform in that it solely uses `for` for all types of repetition. 
+One feature of Go that demonstrates regularity is the repetition control structure. Unlike C, instead of for, while, and do-while, Go solely uses `for` for all types of repetition. Another example is the variable naming conventions enforced by the compiler. The capital letter of the variable determines the visibility of the variable. If the variable starts with a capital letter, the variable will be visible to other files.
 
 #### Security/Reliability
 Go is statically typed, which allows the compiler to enforce type usage, minimizing programmer type errors. Go has error handling with the build-in error type. Functions with the potential to fail can return an `error` type in addition to its regular return value:
@@ -176,3 +176,5 @@ The syntax choice I’d like to see changed is the variable declarations since t
 [https://www.golang-book.com/books/intro/10](https://www.golang-book.com/books/intro/10)
 
 [https://www.golang-book.com/books/intro/9](https://www.golang-book.com/books/intro/9)
+
+
