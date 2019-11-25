@@ -73,19 +73,70 @@ switch x {
 }
 {% endhighlight %}
 
-In terms of repetition, loops can be used in a similar fashion to C. Unlike C, the for loop is used for all repetition. The for loop can be used in the 3-component fashion: for i:=0; i<5; i++ However unlike C, Go does not feature a while loop. Instead, the for keyword is used with a boolean condition to achieve the same functionality: for (i < 5). Additionally, the for keyword can be used with no arguments to create an infinite loop. Like C, the continue statement can be used to immediately being the next iteration of the loop, and the break statement can be used to immediately exit the loop. In order to iterate over elements in data structures like arrays or maps, a for-each range loop can be used:
+In terms of repetition, loops can be used in a similar fashion to C. Unlike C, the for loop is used for all repetition. The for loop can be used in the 3-component fashion: 
 
-for i, s := range array. This allows the programmer to access both the index(i) and the element(s) in the collection. Unlike C, do-while loops are not features of Go. An infinite loop and a conditional break statement would need to be used to replicate the do-while behavior. Go also features goto and labels, however using these to control
+{% highlight Golang %}
+for i:=0; i<5; i++ {
+  ...
+}
+{% endhighlight %}
+
+However unlike C, Go does not feature a while loop. Instead, the for keyword is used with a boolean condition to achieve the same functionality: 
+
+{% highlight Golang %}
+for (i < 5){
+  ...
+}
+{% endhighlight %}
+
+Additionally, the for keyword can be used with no arguments to create an infinite loop.
+Like C, the `continue` statement can be used to immediately being the next iteration of the loop, and the `break` statement can be used to immediately exit the loop. In order to iterate over elements in data structures like arrays or maps, a for-each range loop can be used:
+
+{% highlight Golang %}
+arr := []string{"i'm", "an", "array"}
+for i, s := range arr{
+  fmt.Printf("Index: %d, Element: %s", i, s)
+}
+{% endhighlight %}
+
+
+This allows the programmer to access both the index `i` and the element `s` in the collection.
+Unlike C, do-while loops are not features of Go. An infinite loop and a conditional break statement would need to be used to replicate the do-while behavior:
+
+{% highlight Golang %}
+i := 0
+for{
+  ...
+  if(i<5){
+    break
+  }
+  i++
+}
+{% endhighlight %}
+Go also features goto and labels, however their use is discouraged.
 
 ## Semantics
 
 Go is statically scoped. There is automated garbage collection. Storage is stack-dynamic and heap-dynamic. Each goroutine thread (including the main thread) created by the programmer has its own stack. This encourages threads to communicate through synchronized channels instead of using shared memory which reduces race conditions. Go supports constants of type char, string, boolean, and numeric values.
 
 ## Desirable Language Characteristics
+####Efficiency:
+Go is a language designed to be efficient. First off, Go is compiled language. Unlike languages such as Java, which is first compiled into byte-code and then read on a VM, Go is compiled directly from source code to a binary executable. This allows for quick and direct translation, and fast build speeds. In terms of execution, Go is quite efficient. Go was written to make concurrency simple for the programmer. Unlike programming languages that were originally developed to be single threaded, Go was developed from the ground up to take advantage of multi-core processors. Instead of using threads, Go has what it calls goroutines, as described above. This allows for a very efficient use of multi-core processing power, resulting in fast concurrent execution. Furthermore, Go features clean, easy to use syntax. This makes it very easy for a programmer to translate ideas into efficient code. Because of this clean and neat syntax, Go programs are very easy to maintain. Due to its simplistic approach to OOP, code is cleaner, allowing for easier maintenance—especially with larger applications.
 
+####Regularity:
+One feature of Go that demonstrates regularity is the repetition control structure. Unlike C, instead of for, while, and do-while, Go is uniform in that it solely uses for for all types of repetition. 
+
+####Security/Reliability
+Go is statically typed, which allows the compiler to enforce type usage, minimizing programmer type errors. Go has error handling with the build-in error type. Functions with the potential to fail can return an error type in addition to its regular return value. This error type is only returned if an error occurs, and can describe the error that occurs as a string. The programmer can use this returned error type to conditionally handle the error. This allows the programmer to defend against runtime errors. Go is also quite secure in how it handles concurrency. Go makes it easy to write clean, concurrent code, and encourages communication between goroutines via synchronized channels rather than shared memory. This helps reduce unsafe code that could result in race conditions.
+
+####Extensibility:
+Like most OO languages, Go allows programmers to add new classes and types. However, unlike Java, Go does this with structs and interfaces. Instead of methods being included within an object, methods in Go can be defined on struct types. The methods can then be used in a similar fashion to class methods in Java. Instead of constructors, Go requires the programmer to implement a New() method. 
   
 
 ## Support for Data Abstractions
+An example of data abstractions in Go is the interface. Similar to java, Go allows the programmer to define methods. Interface types can invoke the specific type’s implementation. Unlike Java, these interfaces are implemented implicitly, meaning that the compiler is the only enforcement of the interface to the type.
 
 ## Syntax
+One appealing syntax choice (for the most part) in Go is keeping the familiar C style syntax. 
+The syntax choice I’d like to see changed is the variable declarations since they are backwards from the C style declarations. In Go the variable name in stated first and then the type is listed. Additionally, outside functions and methods, the longhand declaration style must be used which starts with the keyword var (ex: var x int). This is less efficient from a code writing perspective than having the type mark the statement as a variable declaration. To be fair, this choice did enable the parser to be implemented with single token look-ahead, however, which increases the compile speed.
 
