@@ -138,3 +138,15 @@ An example of data abstractions in Go is the interface. Similar to java, Go allo
 One appealing syntax choice (for the most part) in Go is keeping the familiar C style syntax. 
 The syntax choice I’d like to see changed is the variable declarations since they are backwards from the C style declarations. In Go the variable name in stated first and then the type is listed. Additionally, outside functions and methods, the longhand declaration style must be used which starts with the keyword var (ex: var x int). This is less efficient from a code writing perspective than having the type mark the statement as a variable declaration. To be fair, this choice did enable the parser to be implemented with single token look-ahead, however, which increases the compile speed.
 
+## Works Cited
+Citations:
+
+https://golang.org/doc/effective_go.html
+https://www.golang-book.com/books/intro/5
+https://blog.golang.org/gos-declaration-syntax
+https://golang.org/doc/
+https://medium.com/@kevalpatel2106/why-should-you-learn-go-f607681fad65
+http://golangtutorials.blogspot.com/2011/06/goroutines.html
+https://stackimpact.com/docs/go-performance-tuning/
+https://www.golang-book.com/books/intro/10
+https://www.golang-book.com/books/intro/9
