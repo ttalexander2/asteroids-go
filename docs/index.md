@@ -75,6 +75,7 @@ switch x {
 }
 {% endhighlight %}
 
+#### Loops
 In terms of repetition, loops can be used in a similar fashion to C. Unlike C, the for loop is used for all repetition. The for loop can be used in the 3-component fashion: 
 
 {% highlight Golang %}
