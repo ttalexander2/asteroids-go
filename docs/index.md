@@ -138,7 +138,7 @@ One feature of Go that demonstrates regularity is the repetition control structu
 Go is statically typed, which allows the compiler to enforce type usage, minimizing programmer type errors. Go has error handling with the build-in error type. Functions with the potential to fail can return an `error` type in addition to its regular return value:
 
 {% highlight Golang %}
-f, err := os.Open("filename.ext")
+f, err := os.Open("file.txt")
 if err != nil {
     panic(err)
 }
