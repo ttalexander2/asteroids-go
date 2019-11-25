@@ -1,4 +1,4 @@
-theme: jekyll-theme-slate
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-relative-links
 kramdown:
