@@ -1,4 +1,3 @@
-remote_theme: "mmistakes/minimal-mistakes@4.17.2"
 plugins:
   - jekyll-relative-links
 kramdown:
