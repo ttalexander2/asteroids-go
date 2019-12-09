@@ -16,7 +16,7 @@ const (
 			frag_colour = vec4(1, 1, 1, 1.0);
 		}
 	` + "\x00"
-	vertexText = `
+	vertexFontShader = `
 		#version 330 core
 		layout (location = 0) in vec4 vertex; // <vec2 pos, vec2 tex>
 		out vec2 TexCoords;
@@ -29,7 +29,7 @@ const (
 			TexCoords = vertex.zw;
 		}
 	` + "\x00"
-	fragmentText = `
+	fragmentFontShader = `
 	#version 330 core
 	in vec2 TexCoords;
 	out vec4 color;

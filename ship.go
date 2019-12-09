@@ -30,10 +30,28 @@ type Ship struct {
 	asteroids []Asteroid
 	firing    bool
 	lcount    int
+	gameOver  bool
+	dying     bool
 }
 
 //Update
 func (s *Ship) Update() {
+	if s.dying {
+		s.getPoints()
+		s.points = TranslatePoints(s.points, s.x, s.y)
+
+		s.rot += s.dRot
+		s.r = s.r * 0.95
+		s.dX = 0
+		s.dY = 0
+		s.drawable = makeVertexArrayObj(s.points)
+		s.points = RotatePoints(s.points, 100, s.x, s.y)
+		if s.r < 0.05 {
+			s.gameOver = true
+		}
+		return
+	}
+
 	if s.window.GetKey(glfw.KeyUp) == glfw.Press {
 		s.force += speed
 	}
@@ -77,9 +95,13 @@ func (s *Ship) Update() {
 	s.dRot *= 0.85
 	s.force = 0
 
+	if len(s.asteroids) == 0 {
+		s.gameOver = true
+	}
+
 	for i := 0; i < len(s.asteroids); i++ {
 		if s.hits(s.asteroids[i]) {
-
+			s.dying = true
 		}
 	}
 
